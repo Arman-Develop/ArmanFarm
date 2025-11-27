@@ -2,25 +2,18 @@
    INDEX ONLY – MAIN PAGE
 ========================== */
 
-
 /* ==========================
    TOP BANNER (HOME / PRODUCTS)
 ========================== */
-
 .top-banner {
-  background:
-    linear-gradient(
-      90deg,
-      #e9f1ec,
-      #f3f6f2
-    );
+  background: linear-gradient(90deg, #e9f1ec, #f3f6f2);
   border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 
 .top-banner-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 0px 80px;
+  padding: 0 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,21 +27,13 @@
   text-decoration: none;
 }
 
-@media (max-width: 1024px) {
-  .top-banner-inner {
-    padding: 10px 24px;
-  }
-}
-
 /* ==========================
    BOTTOM BRAND BANNER
 ========================== */
-
 .bottom-banner {
-  margin-top: 0px;
+  margin-top: 0;
   padding: 100px 80px;
-  background:
-    radial-gradient(circle at top left, #4b7a5b, #2f5d3a);
+  background: radial-gradient(circle at top left, #4b7a5b, #2f5d3a);
   color: #ffffff;
 }
 
@@ -79,8 +64,9 @@
   font-weight: 600;
 }
 
-
-/* ===== HERO 영역 ===== */
+/* ==========================
+   HERO 영역
+========================== */
 .hero {
   position: relative;
   min-height: 70vh;
@@ -97,10 +83,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(
-    rgba(255,255,255,0.4) 1px,
-    transparent 1px
-  );
+  background-image: linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px);
   background-size: 6px 6px;
   opacity: 0.08;
   pointer-events: none;
@@ -111,7 +94,6 @@
   max-width: 1200px;
   margin: 0 auto;
   z-index: 1;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -136,19 +118,43 @@
   margin-bottom: 32px;
 }
 
+/* 메인 CTA 버튼 */
+.btn-main {
+  display: inline-block;
+  padding: 13px 32px;
+  border-radius: 999px;
+  background: #2f5d3a;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(47,93,58,0.35);
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out,
+    background 0.15s ease-out;
+}
+
+.btn-main:hover {
+  background: #264a2e;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(47,93,58,0.38);
+}
+
 /* 오른쪽 비주얼 3칸 */
 .hero-visual {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 18px;
+  max-width: 420px;
 }
 
 .hero-card {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 50px 200px;
+  gap: 16px;
+  padding: 16px 20px;
   border-radius: 20px;
   background: rgba(255,255,255,0.86);
   box-shadow: 0 10px 24px rgba(0,0,0,0.06);
@@ -156,7 +162,7 @@
 }
 
 .hero-img-wrap {
-  width: 68px;
+  width: 80px;
   aspect-ratio: 1 / 1;
   border-radius: 999px;
   overflow: hidden;
@@ -194,29 +200,59 @@
   color: #666;
 }
 
-/* 메인 CTA 버튼 (기존과 동일) */
-.btn-main {
-  display: inline-block;
-  padding: 13px 32px;
-  border-radius: 999px;
-  background: #2f5d3a;
-  color: #fff;
-  font-weight: 600;
+/* ==========================
+   CATEGORY 섹션
+========================== */
+.category {
+  padding: 60px 80px 90px;
+}
+
+.category-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.category-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 26px 24px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.03);
+  transition:
+    transform 0.18s ease-out,
+    box-shadow 0.18s ease-out,
+    border-color 0.18s ease-out;
+}
+
+.category-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.category-card p {
   font-size: 14px;
-  text-decoration: none;
-  box-shadow: 0 10px 22px rgba(47,93,58,0.35);
-  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out,
-              background 0.15s ease-out;
+  color: #555;
 }
 
-.btn-main:hover {
-  background: #264a2e;
-  transform: translateY(-1px);
-  box-shadow: 0 14px 28px rgba(47,93,58,0.38);
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+  border-color: rgba(47,93,58,0.18);
 }
 
-/* 반응형 */
+/* ==========================
+   RESPONSIVE
+========================== */
+
+/* 태블릿 이하 */
 @media (max-width: 1024px) {
+  .top-banner-inner {
+    padding: 10px 24px;
+  }
+
   .hero {
     padding: 100px 40px 80px;
   }
@@ -237,93 +273,7 @@
 
   .hero-visual {
     width: 100%;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero {
-    padding: 80px 24px 60px;
-    min-height: auto;
-  }
-
-  .hero-text h1 {
-    font-size: 30px;
-  }
-
-  .hero-text p {
-    font-size: 15px;
-  }
-}
-
-
-/* 메인 CTA 버튼 */
-.btn-main {
-  display: inline-block;
-  padding: 13px 32px;
-  border-radius: 999px;
-  background: #2f5d3a;
-  color: #fff;
-  font-weight: 600;
-  font-size: 14px;
-  text-decoration: none;
-  box-shadow: 0 10px 22px rgba(47,93,58,0.35);
-  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out,
-              background 0.15s ease-out;
-}
-
-.btn-main:hover {
-  background: #264a2e;
-  transform: translateY(-1px);
-  box-shadow: 0 14px 28px rgba(47,93,58,0.38);
-}
-
-/* 카테고리 섹션 */
-.category {
-  padding: 60px 80px 90px;
-}
-
-.category-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.category-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 26px 24px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.03);
-  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out,
-              border-color 0.18s ease-out;
-}
-
-.category-card h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.category-card p {
-  font-size: 14px;
-  color: #555;
-}
-
-.category-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 32px rgba(0,0,0,0.08);
-  border-color: rgba(47,93,58,0.18);
-}
-
-/* 반응형 */
-@media (max-width: 1024px) {
-  .hero {
-    padding: 100px 40px 80px;
-  }
-
-  .hero-text h1 {
-    font-size: 36px;
+    max-width: none;
   }
 
   .category {
@@ -335,6 +285,7 @@
   }
 }
 
+/* 모바일 */
 @media (max-width: 640px) {
   .hero {
     padding: 80px 24px 60px;
@@ -355,5 +306,29 @@
 
   .category-inner {
     grid-template-columns: 1fr;
+  }
+}
+
+/* 데스크톱(넓은 화면)에서 카드 조금 더 크게 */
+@media (min-width: 1200px) {
+  .hero-inner {
+    gap: 90px;
+  }
+
+  .hero-visual {
+    max-width: 460px;
+    gap: 22px;
+  }
+
+  .hero-img-wrap {
+    width: 96px;
+  }
+
+  .hero-card-text strong {
+    font-size: 17px;
+  }
+
+  .hero-card-text span {
+    font-size: 14px;
   }
 }
