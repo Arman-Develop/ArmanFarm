@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Arman Develop | 농작물·종자 전문 기업</title>
+  <title>Arman Develop | Seed & Crop Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/style_index.css" />
@@ -14,39 +14,42 @@
   <!-- TOP BANNER -->
   <section class="top-banner">
     <div class="top-banner-inner">
-      <p data-i18n="topBannerText">
+      <!-- ★ 홈 로고 버튼 (좌상단) -->
+      <a href="index.html" class="logo-home">
+        <img src="images/logo_wide.png" alt="Arman Develop Logo">
+      </a>
+
+      <p
+        data-i18n
+        data-en="🌱 Premium Seeds & Crop Solutions by ARMAN DEVELOP"
+        data-ru="🌱 Премиальные семена и агрорешения от ARMAN DEVELOP"
+      >
         🌱 Premium Seeds & Crop Solutions by ARMAN DEVELOP
       </p>
 
       <div class="top-banner-right">
-      <!-- 언어 토글 스위치 -->
-      <div class="lang-toggle" role="radiogroup" aria-label="Language switch">
-        <button
-          type="button"
-          class="lang-toggle-option active"
-          data-lang="ko"
-          aria-pressed="true"
-          title="한국어"
-        >
-          KO
-        </button>
-        <button
-          type="button"
-          class="lang-toggle-option"
-          data-lang="ru"
-          aria-pressed="false"
-          title="Русский"
-        >
-          RU
-        </button>
+        <!-- 언어 토글 스위치 -->
+        <div class="lang-toggle" role="radiogroup" aria-label="Language switch">
+          <button
+            type="button"
+            class="lang-toggle-option active"
+            data-lang="en"
+            aria-pressed="true"
+            title="English"
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            class="lang-toggle-option"
+            data-lang="ru"
+            aria-pressed="false"
+            title="Русский"
+          >
+            RU
+          </button>
+        </div>
       </div>
-
-      <!-- 이 링크는 다국어 처리 안 하고 그대로 영어로 둠 -->
-      <a href="products.html">
-        Explore Varieties →
-      </a>
-    </div>
-
     </div>
   </section>
 </header>
@@ -57,45 +60,116 @@
 
     <!-- 왼쪽 텍스트 -->
     <div class="hero-text">
-      <h1 data-i18n="heroTitle">
-        자연을 담은 종자,<br>미래를 키웁니다
+      <h1
+        data-i18n
+        data-en="Seeds from nature,<br>growing the future"
+        data-ru="Семена природы,<br>мы выращиваем будущее"
+      >
+        Seeds from nature,<br>growing the future
       </h1>
-      <p data-i18n="heroDesc">
-        ARMAN DEVELOP는 농업의 지속가능성을 연구하는<br>
-        농작물·종자 전문 기업입니다.
+
+      <p
+        data-i18n
+        data-en="ARMAN DEVELOP is a seed & crop company<br>focused on sustainable agriculture research."
+        data-ru="ARMAN DEVELOP — компания по семеноводству и сельхозкультурам,<br>занимающаяся исследованиями устойчивого земледелия."
+      >
+        ARMAN DEVELOP is a seed & crop company<br>focused on sustainable agriculture research.
       </p>
-      <a href="products.html" class="btn-main" data-i18n="btnProducts">제품 보기</a>
+
+      <a
+        href="products.html"
+        class="btn-main"
+        data-i18n
+        data-en="View products"
+        data-ru="Смотреть продукты"
+      >
+        View products
+      </a>
     </div>
 
     <!-- 오른쪽 비주얼 3칸 -->
     <div class="hero-visual">
+      <!-- Seeds card -->
       <div class="hero-card">
         <div class="hero-img-wrap seed">
-          <img src="images/SEED.png" alt="종자 이미지">
+          <img
+            src="images/SEED.png"
+            alt="Seed image"
+            data-en-alt="Seed image"
+            data-ru-alt="Изображение семян"
+          >
         </div>
         <div class="hero-card-text">
-          <strong data-i18n="cardSeedTitle">종자</strong>
-          <span data-i18n="cardSeedText">유전·내병성 기반 품종 개발</span>
+          <strong
+            data-i18n
+            data-en="Seeds"
+            data-ru="Семена"
+          >
+            Seeds
+          </strong>
+          <span
+            data-i18n
+            data-en="Breeding high-yield, disease-resistant varieties"
+            data-ru="Селекция высокоурожайных, устойчивых к болезням сортов"
+          >
+            Breeding high-yield, disease-resistant varieties
+          </span>
         </div>
       </div>
 
+      <!-- Crops card -->
       <div class="hero-card">
         <div class="hero-img-wrap crop">
-          <img src="images/COLOR_TOMATO.jpg" alt="농작물 이미지">
+          <img
+            src="images/COLOR_TOMATO.jpg"
+            alt="Crop image"
+            data-en-alt="Crop image"
+            data-ru-alt="Изображение сельхозкультур"
+          >
         </div>
         <div class="hero-card-text">
-          <strong data-i18n="cardCropTitle">농작물</strong>
-          <span data-i18n="cardCropText">재배 시험 및 수확 품질 관리</span>
+          <strong
+            data-i18n
+            data-en="Crops"
+            data-ru="Сельхозкультуры"
+          >
+            Crops
+          </strong>
+          <span
+            data-i18n
+            data-en="Cultivation trials and harvest quality control"
+            data-ru="Опытные посевы и контроль качества урожая"
+          >
+            Cultivation trials and harvest quality control
+          </span>
         </div>
       </div>
 
+      <!-- Logistics card -->
       <div class="hero-card">
         <div class="hero-img-wrap logistics">
-          <img src="images/SHIPPING.png" alt="유통/포장 이미지">
+          <img
+            src="images/SHIPPING.png"
+            alt="Packaging and logistics image"
+            data-en-alt="Packaging and logistics image"
+            data-ru-alt="Изображение упаковки и логистики"
+          >
         </div>
         <div class="hero-card-text">
-          <strong data-i18n="cardLogTitle">포장·유통</strong>
-          <span data-i18n="cardLogText">신선도 유지·수출 대응 패키징</span>
+          <strong
+            data-i18n
+            data-en="Packaging & logistics"
+            data-ru="Упаковка и логистика"
+          >
+            Packaging & logistics
+          </strong>
+          <span
+            data-i18n
+            data-en="Freshness-preserving, export-ready packing"
+            data-ru="Упаковка для сохранения свежести и экспорта"
+          >
+            Freshness-preserving, export-ready packing
+          </span>
         </div>
       </div>
     </div>
@@ -106,101 +180,96 @@
 <!-- BOTTOM BRAND BANNER -->
 <section class="bottom-banner">
   <div class="bottom-banner-inner">
-    <h2 data-i18n="bottomTitle">
-      Growing Reliability,<br>
-      From Seed to Harvest
+    <h2
+      data-i18n
+      data-en="Growing reliability,<br>from seed to harvest"
+      data-ru="Надёжный рост<br>от семени до урожая"
+    >
+      Growing reliability,<br>from seed to harvest
     </h2>
-    <p data-i18n="bottomText">
-      ARMAN DEVELOP는 품종 개발부터 재배 환경까지<br>
-      농업의 전 과정을 연구합니다.
+
+    <p
+      data-i18n
+      data-en="From breeding to field conditions,<br>ARMAN DEVELOP studies the entire agricultural process."
+      data-ru="От селекции до условий выращивания<br>ARMAN DEVELOP изучает весь аграрный цикл."
+    >
+      From breeding to field conditions,<br>ARMAN DEVELOP studies the entire agricultural process.
     </p>
-    <a href="about.html" class="btn-outline-light" data-i18n="bottomBtn">
-      About Our Research
+
+    <a
+      href="about.html"
+      class="btn-outline-light"
+      data-i18n
+      data-en="About our research"
+      data-ru="О наших исследованиях"
+    >
+      About our research
     </a>
   </div>
 </section>
 
 <footer class="footer">
-  <p data-i18n="footer">
-    © 2025 ARMAN DEVELOP. All Rights Reserved.
+  <p
+    data-i18n
+    data-en="© 2025 ARMAN DEVELOP. All rights reserved."
+    data-ru="© 2025 ARMAN DEVELOP. Все права защищены."
+  >
+    © 2025 ARMAN DEVELOP. All rights reserved.
   </p>
 </footer>
 
-<!-- (맨 아래에 JS 추가 예정) -->
+<!-- LANGUAGE SWITCH SCRIPT (products.html과 동일 로직) -->
 <script>
-  const translations = {
-    ko: {
-      topBannerText: "🌱 Premium Seeds & Crop Solutions by ARMAN DEVELOP",
-      heroTitle: "자연을 담은 종자,<br>미래를 키웁니다",
-      heroDesc: "ARMAN DEVELOP는 농업의 지속가능성을 연구하는<br>농작물·종자 전문 기업입니다.",
-      btnProducts: "제품 보기",
+  const DEFAULT_LANG = "en";
+  const SUPPORTED_LANGS = ["en", "ru"];
 
-      cardSeedTitle: "종자",
-      cardSeedText: "유전·내병성 기반 품종 개발",
-
-      cardCropTitle: "농작물",
-      cardCropText: "재배 시험 및 수확 품질 관리",
-
-      cardLogTitle: "포장·유통",
-      cardLogText: "신선도 유지·수출 대응 패키징",
-
-      bottomTitle: "Growing Reliability,<br>From Seed to Harvest",
-      bottomText: "ARMAN DEVELOP는 품종 개발부터 재배 환경까지<br>농업의 전 과정을 연구합니다.",
-      bottomBtn: "연구 소개 보기",
-
-      footer: "© 2025 ARMAN DEVELOP. All Rights Reserved."
-    },
-
-    ru: {
-      topBannerText: "🌱 Премиальные семена и агрорешения от ARMAN DEVELOP",
-      heroTitle: "Семена природы,<br>растим будущее",
-      heroDesc: "ARMAN DEVELOP — компания, исследующая устойчивое сельское хозяйство<br>и профессиональное семеноводство.",
-      btnProducts: "Смотреть продукты",
-
-      cardSeedTitle: "Семена",
-      cardSeedText: "Селекция устойчивых и высокоурожайных сортов",
-
-      cardCropTitle: "Сельхозкультуры",
-      cardCropText: "Опытные посевы и контроль качества урожая",
-
-      cardLogTitle: "Упаковка и логистика",
-      cardLogText: "Упаковка для сохранения свежести и экспорта",
-
-      bottomTitle: "Надёжный рост<br>от семени до урожая",
-      bottomText: "ARMAN DEVELOP исследует весь цикл сельского хозяйства —<br>от селекции сортов до условий выращивания.",
-      bottomBtn: "О наших исследованиях",
-
-      footer: "© 2025 ARMAN DEVELOP. Все права защищены."
+  function getInitialLang() {
+    const stored = localStorage.getItem("siteLang");
+    if (SUPPORTED_LANGS.includes(stored)) {
+      return stored;
     }
-  };
+    return DEFAULT_LANG;
+  }
 
   function setLanguage(lang) {
-    // 텍스트 교체
+    if (!SUPPORTED_LANGS.includes(lang)) {
+      lang = DEFAULT_LANG;
+    }
+
+    // 텍스트 번역: data-i18n + data-en / data-ru
     document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      const text = translations[lang][key];
+      const text = el.dataset[lang];
       if (text !== undefined) {
-        el.innerHTML = text;   // <br> 사용해서 innerHTML
+        el.innerHTML = text;
       }
     });
 
-    // <html lang=".."> 변경
-    document.documentElement.lang = (lang === "ko") ? "ko" : "ru";
+    // 이미지 alt 번역 (선택사항)
+    document.querySelectorAll("[data-en-alt]").forEach(img => {
+      const altKey = lang + "Alt";  // "enAlt" or "ruAlt"
+      const altText = img.dataset[altKey];
+      if (altText) {
+        img.setAttribute("alt", altText);
+      }
+    });
 
-    // 토글 버튼 상태 반영
+    // <html lang="...">
+    document.documentElement.lang = lang;
+
+    // 토글 버튼 상태
     document.querySelectorAll(".lang-toggle-option").forEach(btn => {
       const isActive = btn.dataset.lang === lang;
       btn.classList.toggle("active", isActive);
       btn.setAttribute("aria-pressed", isActive);
     });
 
-    // 로컬 저장
+    // 저장
     localStorage.setItem("siteLang", lang);
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("siteLang") || "ko";
-    setLanguage(savedLang);
+    const initialLang = getInitialLang();
+    setLanguage(initialLang);
 
     document.querySelectorAll(".lang-toggle-option").forEach(btn => {
       btn.addEventListener("click", () => {
@@ -210,7 +279,6 @@
     });
   });
 </script>
-
 
 </body>
 </html>

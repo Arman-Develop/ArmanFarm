@@ -2,17 +2,48 @@
    INDEX ONLY – MAIN PAGE
 ========================== */
 
+/* 공통 레이아웃 유틸 */
+.section-padding-x {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media (max-width: 1024px) {
+  .section-padding-x {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-padding-x {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 /* ==========================
    TOP BANNER (HOME / PRODUCTS)
 ========================== */
+
 .top-banner {
   background: linear-gradient(90deg, #e9f1ec, #f3f6f2);
-  border-bottom: 1px solid rgba(0,0,0,0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
+
 .top-banner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 13px;
+  color: #355c45;
+}
+
+.top-banner-inner p {
+  margin: 0;
 }
 
 .top-banner-right {
@@ -21,7 +52,7 @@
   gap: 16px;
 }
 
-/* pill 형태 언어 토글 */
+/* 언어 토글 (EN / RU) pill */
 .lang-toggle {
   display: inline-flex;
   align-items: center;
@@ -54,81 +85,27 @@
 }
 
 .lang-toggle-option.active {
-  background: #2f5d3a;       /* 브랜드 그린 계열 */
+  background: #2f5d3a; /* 브랜드 그린 */
   color: #ffffff;
   opacity: 1;
 }
 
-/* 언어 토글 버튼 스타일 */
-.lang-switch {
-  display: flex;
-  align-items: center;
-  font-size: 13px;
-  color: #355c45;
-}
-
-.lang-btn {
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0 4px;
-  cursor: pointer;
-  font-size: 13px;
-  color: #355c45;
-  opacity: 0.6;
-}
-
-.lang-btn.active {
-  font-weight: 700;
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.lang-divider {
-  opacity: 0.3;
-}
-
-
-/* ==========================
-   BOTTOM BRAND BANNER
-========================== */
-.bottom-banner {
-  margin-top: 0;
-  padding: 100px 80px;
-  background: radial-gradient(circle at top left, #4b7a5b, #2f5d3a);
-  color: #ffffff;
-}
-
-.bottom-banner-inner {
-  max-width: 1100px;
-}
-
-.bottom-banner h2 {
-  font-size: 38px;
-  line-height: 1.2;
-  margin-bottom: 18px;
-}
-
-.bottom-banner p {
-  max-width: 520px;
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-.btn-outline-light {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 12px 30px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.7);
-  color: #fff;
+/* TOP BANNER – 링크 */
+.top-banner-right a {
+  color: #2f5d3a;
   text-decoration: none;
   font-weight: 600;
+  font-size: 13px;
+}
+
+.top-banner-right a:hover {
+  text-decoration: underline;
 }
 
 /* ==========================
    HERO 영역
 ========================== */
+
 .hero {
   position: relative;
   min-height: 70vh;
@@ -145,7 +122,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px);
   background-size: 6px 6px;
   opacity: 0.08;
   pointer-events: none;
@@ -190,7 +167,7 @@
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
-  box-shadow: 0 10px 22px rgba(47,93,58,0.35);
+  box-shadow: 0 10px 22px rgba(47, 93, 58, 0.35);
   transition:
     transform 0.15s ease-out,
     box-shadow 0.15s ease-out,
@@ -200,7 +177,7 @@
 .btn-main:hover {
   background: #264a2e;
   transform: translateY(-1px);
-  box-shadow: 0 14px 28px rgba(47,93,58,0.38);
+  box-shadow: 0 14px 28px rgba(47, 93, 58, 0.38);
 }
 
 /* 오른쪽 비주얼 3칸 */
@@ -218,9 +195,9 @@
   gap: 16px;
   padding: 16px 20px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.86);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-  border: 1px solid rgba(0,0,0,0.02);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.02);
 }
 
 .hero-img-wrap {
@@ -240,7 +217,7 @@
   object-fit: cover;
 }
 
-/* 분야별 배경 톤 살짝 다르게 */
+/* 분야별 배경 톤 */
 .hero-img-wrap.seed {
   background: radial-gradient(circle at 30% 20%, #f6f2dd, #e4e3cf);
 }
@@ -263,8 +240,9 @@
 }
 
 /* ==========================
-   CATEGORY 섹션
+   CATEGORY 섹션 (필요 시 사용)
 ========================== */
+
 .category {
   padding: 60px 80px 90px;
 }
@@ -281,8 +259,8 @@
   background: #ffffff;
   border-radius: 20px;
   padding: 26px 24px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.03);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
   transition:
     transform 0.18s ease-out,
     box-shadow 0.18s ease-out,
@@ -301,8 +279,51 @@
 
 .category-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 32px rgba(0,0,0,0.08);
-  border-color: rgba(47,93,58,0.18);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+  border-color: rgba(47, 93, 58, 0.18);
+}
+
+/* ==========================
+   BOTTOM BRAND BANNER
+========================== */
+
+.bottom-banner {
+  margin-top: 0;
+  padding: 100px 80px;
+  background: radial-gradient(circle at top left, #4b7a5b, #2f5d3a);
+  color: #ffffff;
+}
+
+.bottom-banner-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bottom-banner h2 {
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.bottom-banner p {
+  max-width: 520px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.btn-outline-light {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 /* ==========================
@@ -345,6 +366,10 @@
   .category-inner {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .bottom-banner {
+    padding: 80px 40px;
+  }
 }
 
 /* 모바일 */
@@ -368,6 +393,18 @@
 
   .category-inner {
     grid-template-columns: 1fr;
+  }
+
+  .bottom-banner {
+    padding: 70px 24px 60px;
+  }
+
+  .bottom-banner h2 {
+    font-size: 30px;
+  }
+
+  .bottom-banner p {
+    font-size: 15px;
   }
 }
 
