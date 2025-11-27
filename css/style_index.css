@@ -139,6 +139,21 @@
   gap: 60px;
 }
 
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #e3f3e8;
+  color: #1f7c48;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
 /* 왼쪽 텍스트 */
 .hero-text {
   flex: 0 0 380px;
