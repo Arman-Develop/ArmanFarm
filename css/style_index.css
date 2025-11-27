@@ -180,6 +180,45 @@
   box-shadow: 0 14px 28px rgba(47, 93, 58, 0.38);
 }
 
+/* ==========================
+   HERO BUTTONS
+========================== */
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+/* Contact Us - WhatsApp Button */
+.btn-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: white;
+  color: #2f5d3a;
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: 0.2s ease;
+}
+
+.btn-whatsapp img {
+  width: 28px;     /* 아이콘 크게 */
+  height: 28px;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.25)); /* 아이콘 선명하게 */
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+
+
+
 /* 오른쪽 비주얼 3칸 */
 .hero-visual {
   flex: 1;
