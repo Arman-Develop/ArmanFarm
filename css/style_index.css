@@ -20,7 +20,7 @@
 .top-banner-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 3px 80px;
+  padding: 0px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
