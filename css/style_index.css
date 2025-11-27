@@ -9,23 +9,85 @@
   background: linear-gradient(90deg, #e9f1ec, #f3f6f2);
   border-bottom: 1px solid rgba(0,0,0,0.04);
 }
-
 .top-banner-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 80px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.top-banner-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* pill 형태 언어 토글 */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.lang-toggle-option {
+  border: none;
+  background: transparent;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  color: #355c45;
+  opacity: 0.55;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    opacity 0.18s ease,
+    transform 0.12s ease;
+}
+
+.lang-toggle-option:hover {
+  opacity: 0.8;
+  transform: translateY(-0.5px);
+}
+
+.lang-toggle-option.active {
+  background: #2f5d3a;       /* 브랜드 그린 계열 */
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* 언어 토글 버튼 스타일 */
+.lang-switch {
+  display: flex;
   align-items: center;
   font-size: 13px;
   color: #355c45;
 }
 
-.top-banner a {
-  color: #2f5d3a;
-  font-weight: 600;
-  text-decoration: none;
+.lang-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #355c45;
+  opacity: 0.6;
 }
+
+.lang-btn.active {
+  font-weight: 700;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.lang-divider {
+  opacity: 0.3;
+}
+
 
 /* ==========================
    BOTTOM BRAND BANNER
